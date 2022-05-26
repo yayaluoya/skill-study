@@ -1,0 +1,31 @@
+{
+  "name": "algorithm-study",
+  "version": "1.0.0",
+  "description": "关于算法图解一书和对算法的学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webapck-dev": "webpack",
+    "server": "http-server ./public -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yayaluoya/algorithm-study.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yayaluoya/algorithm-study/issues"
+  },
+  "homepage": "https://github.com/yayaluoya/algorithm-study#readme",
+  "dependencies": {
+    "ts-loader": "^9.3.0",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.0",
+    "webpackbar": "^5.0.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
+}
