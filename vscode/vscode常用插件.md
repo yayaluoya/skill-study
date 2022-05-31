@@ -1,15 +1,15 @@
 # VsCode常用的插件
 
-## Chinese (Simplified) Language Pack for Visual Studio Code [必须]
+## Chinese (Simplified) Language Pack for Visual Studio Code
 
     中文(简体)语言包扩展
     安装后，在 locale.json 中添加 "locale": "zh-cn"，即可载入中文（简体）语言包。要修改 locale.json，你可以同时按下 Ctrl+Shift+P 打开命令面板，之后输入 "config" 筛选可用命令列表，最后选择配置语言命令。
 
-## GitLens — Git supercharged [必须]
+## GitLens — Git supercharged
 
     增加了Visual Studio代码中内置的Git功能。它通过Git责备注释和代码透镜帮助您直观地看到代码的作者身份，无缝地导航和探索Git存储库，通过强大的比较获得有价值的见解
 
-## Prettier & ESLint & TSLint [必须]
+## Prettier & ESLint & TSLint
 
     格式化
     配置了自动格式化后没有效果，就手动点击格式代码，然后手动指定格式化插件
@@ -38,10 +38,9 @@
 
     通过使用警告、信息、待办事项等注释来改进代码注释!
 
-## 常用 相比One Dark Pro更暗一些，而且各个层级更加容易分辨
-
 ## Atom One Dark Theme
 
+    常用 相比One Dark Pro更暗一些，而且各个层级更加容易分辨
     一个基于Atom的黑暗主题
 
 ## Dracula Official 一个感觉对比度很高的主题
@@ -68,9 +67,7 @@
     
     一个非常好看的主题
 
-## 常用
-
-## One Dark Pro
+## One Dark Pro [推荐]
 
     对于Visual Studio代码，Atom标志性的一个黑色主题
 
@@ -98,17 +95,13 @@
 
     Shader语言支持VS代码
 
-## vscode-icons
+## vscode-icons [推荐]
 
     Visual Studio代码的图标
 
 ## Material Icon Theme
 
     Visual Studio代码的材料设计图标
-
-## C#
-
-    c#用于Visual Studio代码(由OmniSharp提供)。
 
 ## koroFileHeader
 
@@ -144,7 +137,7 @@
     3.输入Fix Checksums: Apply
     4.重启vscode即可
 
-## background-cover [推荐]
+## background-cover
 
     全屏的背景图，非常方便
     同样可以在setting文件中设置图片和透明度
@@ -167,7 +160,7 @@
     
 ## Vue Language Features (Volar)
     
-    为Vue提供TypeScript支持
+    比较适合vue3的插件，为Vue提供TypeScript支持
     
 ## Vetur
     
@@ -184,3 +177,7 @@
 ## LeetCode
     
     在 VS Code 中练习 LeetCode
+
+## uniapp-snippet
+
+    uniapp片段提示
