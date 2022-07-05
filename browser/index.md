@@ -5,3 +5,4 @@
 
 #### 翻墙
 - https://github.com/Alvin9999/new-pac 一个非常好用的翻墙工具
+  - 备用网址https://tr2.freeair888.club/
