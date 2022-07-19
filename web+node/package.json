@@ -8,7 +8,8 @@
   },
   "scripts": {
     "增量编译": "webpack",
-    "开始测试": "node ./dist/bundle.js"
+    "开始测试": "node ./dist/bundle.js",
+    "node测试": "nodemon ./node/index.js --watch ./node/**/"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "happypack": "^5.0.1",
     "pako": "^2.0.3",
     "raw-loader": "^4.0.2",
+    "spdy": "^4.0.2",
     "ts-loader": "^8.0.13",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "tslib": "^2.1.0",
@@ -40,6 +42,7 @@
     "babel-loader": "^8.2.2",
     "cache-loader": "^4.1.0",
     "hard-source-webpack-plugin": "^0.13.1",
+    "nodemon": "^2.0.19",
     "webpack": "^5.11.1",
     "webpack-dev-server": "^3.11.1"
   }
