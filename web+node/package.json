@@ -8,7 +8,7 @@
   },
   "scripts": {
     "增量编译": "webpack",
-    "开始测试": "node ./dist/bundle.js",
+    "开始测试": "nodemon ./dist/bundle.js",
     "node测试": "nodemon ./node/index.js --watch ./node/**/"
   },
   "repository": {
