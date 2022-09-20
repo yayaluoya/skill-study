@@ -6,9 +6,12 @@
     "baseUrl": ".",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "DOM"
     ],
+    "typeRoots": [],
+    "types": []
   },
   "include": [
     "./src/**/*",
