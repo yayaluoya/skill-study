@@ -48,4 +48,4 @@ let ___: 'a' | 'c' = __;
 /** unknown是所有类型的父类型，所以所有类型值都能赋值给它 */
 unknown_ = {};
 /** never是所有类型的子类型，所以它可以赋值给任何类型 */
-let c: number = nerver_
+let c: number = nerver_;
