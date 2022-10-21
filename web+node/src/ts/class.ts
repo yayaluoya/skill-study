@@ -66,3 +66,52 @@ type TC_ = TC<{ a: string }>
  * TODO 这里需要注意，为什么传的string进去却原路返回的string
  */
 type TD = Partial<string>
+
+
+class D {
+    /**
+     * 把需要在constructor中初始化的属性直接写到constructor的参数中
+     * 相当于把声明和赋值合并至一处
+     * 写法更加简洁了，直接把属性修饰符写到参数前面就行了
+     * @param a 
+     * @param b 
+     */
+    constructor(
+        /** a属性 */
+        protected readonly a: string,
+        /** b属性 */
+        public b: string
+    ) { }
+}
+
+class D1 extends D {
+    getA() {
+        return this.a;
+    }
+}
+
+let d1 = new D1('a', 'b');
+
+console.log(d1.b);
+
+class E {
+    /** 
+     * 存取器a
+     * 如果没有定义set的话，该寄存器会被自动推断成redonly
+     */
+    get a() {
+        return 1;
+    }
+    // set a(a){
+    //     console.log(a);
+    // }
+}
+
+interface IE extends E { }
+
+let e1: IE = {
+    a: 1,
+};
+
+// e1.a = 3;
+

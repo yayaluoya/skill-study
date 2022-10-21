@@ -181,3 +181,7 @@
 ## uniapp-snippet
 
     uniapp片段提示
+
+## VS Browser
+
+    在vscode中浏览网页

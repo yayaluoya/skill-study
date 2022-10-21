@@ -49,3 +49,7 @@ let ___: 'a' | 'c' = __;
 unknown_ = {};
 /** never是所有类型的子类型，所以它可以赋值给任何类型 */
 let c: number = nerver_;
+
+function A() { }
+
+let a: typeof A = A;
