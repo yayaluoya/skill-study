@@ -53,3 +53,25 @@ function fun1(a: string): string;
 function fun1(a: number | string): number | string {
     return a;
 }
+
+/**
+ * 关于函数签名什么时候用(a: number)=>number和什么时候用{(a: number):number}
+ * 如果是简写版的话就要写成=>如果是完整版的话就要写成{:}，因为{:}的写法是类定义的
+ */
+
+
+/**
+ * 
+ * @param a 
+ * @param b 
+ */
+function fun2(a: any, b: any): void
+function fun2(this: void, a = 'fasd', b: string, c?: string) {
+    //
+}
+
+let el = document.createElement('div');
+
+el.addEventListener('click', function (this: string) {
+    console.log(this);
+});

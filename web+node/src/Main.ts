@@ -10,3 +10,5 @@ let m: G.IGlob;
 let a: G.A;
 
 let i_m: ITest;
+
+import "./ts/enum";
