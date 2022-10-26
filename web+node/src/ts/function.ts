@@ -75,3 +75,68 @@ let el = document.createElement('div');
 el.addEventListener('click', function (this: string) {
     console.log(this);
 });
+
+let x = (a: number): string => '';
+let y = (b: number | string, s: string): string | number => '';
+
+y = x; // OK
+// x = y; // Error
+
+/**
+ * 注意实现方法的签名是不可用的
+ * @param b 
+ * @param s 
+ */
+function fun3(b: number): number | string
+function fun3(b: number, s?: boolean, d?: boolean): number | string | { a: string }
+/**
+ * 实现方法的类型必须是各个重载类型的并集
+ * @param b 
+ * @param s 
+ * @returns 
+ */
+function fun3(b: number | string, s?: string | boolean): number | string {
+    return b;
+}
+fun3(1, false)
+// fun3(1);// Error
+
+let fun4: (b: number) => number | string = fun3;
+fun4(1);
+
+
+/**
+ * 关于函数参数双向协变性的测试代码
+ */
+enum EventType { Mouse, Keyboard }
+interface Event { timestamp: number; }
+interface MouseEvent extends Event { x: number; y: number }
+interface KeyEvent extends Event { keyCode: number }
+
+function listenEvent(eventType: EventType, handler: (n: Event, c: string) => void) {
+    /* ... */
+}
+
+// Unsound, but useful and common
+listenEvent(EventType.Mouse, (e: MouseEvent) => console.log(e.x + ',' + e.y));
+
+// Undesirable alternatives in presence of soundness
+listenEvent(EventType.Keyboard, (e: KeyEvent) => console.log((<KeyEvent>e).keyCode + ',' + (<KeyEvent>e).keyCode));
+listenEvent(EventType.Mouse, <(e: Event) => void>((e: MouseEvent) => console.log(e.x + ',' + e.y)));
+
+// Still disallowed (clear error). Type safety enforced for wholly incompatible types
+// listenEvent(EventType.Mouse, (e: number) => console.log(e));
+
+/**
+ * 关于剩余参数的类型探讨
+ */
+
+function invokeLater(args: any[], callback: (...args: any[]) => void) {
+    /* ... Invoke callback with 'args' ... */
+}
+
+// Unsound - invokeLater "might" provide any number of arguments
+invokeLater([1, 2], (x, y) => console.log(x + ', ' + y));
+
+// Confusing (x and y are actually required) and undiscoverable
+invokeLater([1, 2], (x?, y?) => console.log(x + ', ' + y));

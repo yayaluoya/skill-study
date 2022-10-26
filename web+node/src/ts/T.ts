@@ -29,3 +29,12 @@ let x = { a: 1, b: 2, c: 3, d: 4 };
 
 getProperty(x, "a"); // okay
 getProperty(x, 'b'); // error: Argument of type 'm' isn't assignable to 'a' | 'b' | 'c' | 'd'.
+
+interface Empty<T> {
+    a: string;
+    // b: T;
+}
+let x1: Empty<number>;
+let y1: Empty<string>;
+
+x1 = y1;  // OK, because y matches structure of x

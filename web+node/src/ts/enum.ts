@@ -46,3 +46,11 @@ let value1: EC.a | EC.c = EC.a;
  * 还有一个变化是枚举本身变成了每个枚举成员的联合
  */
 let value2: BooleanLikeHeterogeneousEnum.No = BooleanLikeHeterogeneousEnum.No;
+
+enum ES {
+    a = 'a',
+    b = ''
+}
+
+let a__: string = BooleanLikeHeterogeneousEnum.Yes;
+let a__1: BooleanLikeHeterogeneousEnum = 1;
