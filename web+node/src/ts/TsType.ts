@@ -50,6 +50,84 @@ unknown_ = {};
 /** never是所有类型的子类型，所以它可以赋值给任何类型 */
 let c: number = nerver_;
 
-function A() { }
+function A() {
+
+}
 
 let a: typeof A = A;
+
+interface Bird {
+    fly();
+    layEggs(n: { a: string });
+}
+
+interface Fish {
+    swim();
+    layEggs(s: { b: string });
+}
+
+function getSmallPet(): Bird | Fish {
+    // ...
+    return {} as any;
+}
+
+let pet = getSmallPet();
+/**
+ * 这里说明了联合类型对象可以使用类型里共有的成员
+ * 而且在vscode中访问类型的顺序是顺序的
+ * 参数类型是几个类型的交叉类型
+ * 其实这是理所应当的
+ */
+pet.layEggs({
+    a: '',
+    b: '',
+}); // okay
+// pet.swim();    // errors
+
+function isB(a: Bird | Fish | A | Array<any> | CA): a is Bird {
+    return true;
+}
+if (isB(pet)) {
+    pet.fly()
+}
+
+class CA {
+    b: string;
+    a() { }
+}
+
+let aaa: A | Bird | Array<any> | CA;
+
+if (isB(aaa)) {
+    aaa.fly()
+}
+if (aaa instanceof Array) {
+    aaa
+}
+if (aaa instanceof CA) {
+    aaa.a();
+    aaa.b;
+}
+
+interface AA {
+    a: string;
+    b: number;
+    [key: string]: string | number;
+}
+type a = AA[keyof AA];
+let _a: a = 'a';
+
+/** 对一些内部条件类型的实现 */
+type Exclude_<A, B> = A extends B ? never : A;
+type NonNullable_<A> = A extends undefined | null ? never : A;
+type ReturnType_<T> = T extends (...args) => infer R ? R : void;
+
+type T00 = Exclude_<"a" | "b" | "c" | "d", "a" | "c" | "f">;  // "b" | "d"
+type T04 = NonNullable_<string | number | undefined>;  // string | number
+type T10 = ReturnType_<() => string>;  // string
+type ReturnType2 = ReturnType<any>;
+type new2 = new (...args) => any;
+// type new2 = { new(...args): any };
+type T11 = Parameters<(s: string) => void>;  // void
+let T11_: T11 = [''];
+type TTTT = [string, number];

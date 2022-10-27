@@ -87,15 +87,15 @@ y = x; // OK
  * @param b 
  * @param s 
  */
-function fun3(b: number): number | string
-function fun3(b: number, s?: boolean, d?: boolean): number | string | { a: string }
+function fun3(b: number | string): number | string
+function fun3(b: number | string | boolean, s?: boolean, d?: boolean): number | string | { a: string }
 /**
  * 实现方法的类型必须是各个重载类型的并集
  * @param b 
  * @param s 
  * @returns 
  */
-function fun3(b: number | string, s?: string | boolean): number | string {
+function fun3(b: number, s?: string | boolean): number | string {
     return b;
 }
 fun3(1, false)
