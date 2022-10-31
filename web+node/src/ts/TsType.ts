@@ -131,3 +131,9 @@ type new2 = new (...args) => any;
 type T11 = Parameters<(s: string) => void>;  // void
 let T11_: T11 = [''];
 type TTTT = [string, number];
+
+type A12 = {
+    a: string
+};
+
+type a__ = typeof A;

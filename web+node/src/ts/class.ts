@@ -14,7 +14,7 @@ interface IANew {
 class A implements IA {
     public a: string;
     private b: string = 'adfasdf';
-    protected c: string;
+    protected readonly c: string;
 
     constructor(a: string) {
         this.a = a;
@@ -25,7 +25,11 @@ class A implements IA {
     static A() {
         return 'A类的静态方法';
     }
+
+    hh() { }
 }
+
+new A('').hh = function () { }
 
 class AA2 implements IA {
     public a: string;
