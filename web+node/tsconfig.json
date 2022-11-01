@@ -11,7 +11,12 @@
       "DOM"
     ],
     "typeRoots": [],
-    "types": []
+    "types": [],
+    "rootDirs": [
+      "src/ts/rootDirs/a",
+      "src/ts/rootDirs/b",
+      "src/#{locale}"
+    ]
   },
   "include": [
     "./src/**/*",
