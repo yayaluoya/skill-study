@@ -16,7 +16,8 @@
       "src/ts/rootDirs/a",
       "src/ts/rootDirs/b",
       "src/#{locale}"
-    ]
+    ],
+    "rootDir": ""
   },
   "include": [
     "./src/**/*",

@@ -33,3 +33,7 @@ class AAAA extends AAA { }
 console.log(AAA.prototype)
 
 // new AAA();
+
+let arr = [];
+arr.at__();
+arr.toString();
