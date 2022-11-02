@@ -4,6 +4,7 @@
     "target": "ESNext",
     "sourceMap": true,
     "baseUrl": ".",
+    "jsx": "preserve",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": true,
