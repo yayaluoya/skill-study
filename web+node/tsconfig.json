@@ -11,8 +11,10 @@
     "lib": [
       "DOM"
     ],
-    "typeRoots": [],
-    "types": ["weixin-app"],
+    "typeRoots": [
+      // 默认就是这个，如果写的[]的话将不引人任何外部包，types也是如此
+      "./node_modules/@types"
+    ],
     "rootDirs": [
       "src/ts/rootDirs/a",
       "src/ts/rootDirs/b",
