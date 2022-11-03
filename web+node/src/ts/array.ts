@@ -14,3 +14,5 @@ let a5: readonly number[] = [];
 let a6: ReadonlyArray<number> = [];
 // 这里可能是Readonly做了一些判断吧
 let a7: Readonly<string[]> = [];
+
+export default a;

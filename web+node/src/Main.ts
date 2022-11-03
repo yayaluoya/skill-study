@@ -1,6 +1,7 @@
 import "./Function";
 
 import "./ES13";
+import "./ts/metadata"
 console.log('hello word');
 import G from "glob";
 
