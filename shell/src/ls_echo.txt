@@ -1,0 +1,15 @@
+echo-arguments.sh
+files.txt
+ls.sh
+echo-arguments.sh
+ls.sh
+ls_echo.txt
+echo-arguments.sh
+ls.sh
+ls_echo.txt
+echo-arguments.sh
+ls.sh
+ls_echo.txt
+echo-arguments.sh
+ls.sh
+ls_echo.txt
