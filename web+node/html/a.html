@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        验证断点中的作用域链为
+        Local: {
+            this: undefined,
+            a11: 'a11',
+        }
+        Script: {
+            a1: 'a1',
+        }
+        Global: {
+            a: 'a',
+            ...
+        }
+        并且中断时作用域的内容是可更改的
+     -->
+    <script>
+        var a = 'a';
+    </script>
+    <script>
+        let a1 = 'a1';
+        (() => {
+            let a11 = 'a11';
+            debugger;
+            console.log(a, a1, a11);
+        })();
+    </script>
+</body>
+
+</html>
