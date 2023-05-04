@@ -1,4 +1,4 @@
-# VsCode常用的插件
+# VsCode 常用的插件
 
 ## Chinese (Simplified) Language Pack for Visual Studio Code
 
@@ -62,9 +62,9 @@
 ## GitHub Plus Theme
 
     一个GitHub启发颜色主题的VSCode代码和界面!
-    
+
 ## Nebula Theme
-    
+
     一个非常好看的主题
 
 ## One Dark Pro [推荐]
@@ -73,7 +73,7 @@
 
 ## Bracket Pair Colorizer
 
-    用于给匹配括号着色的可自定义扩展    
+    用于给匹配括号着色的可自定义扩展
 
 ## Color Picker
 
@@ -157,25 +157,25 @@
 ## Code Spell Checker
 
     Visual Studio代码的拼写检查器
-    
+
 ## Vue Language Features (Volar)
-    
+
     比较适合vue3的插件，为Vue提供TypeScript支持
-    
+
 ## Vetur
-    
+
     为vue提供代码提示
-    
+
 ## 前端每日一题
 
     一个前端刷题插件
-    
+
 ## z-reader
 
     用来摸鱼或学习的小说阅读插件,支持在线搜索和本地阅读,支持 txt 和 epub 格式
-    
+
 ## LeetCode
-    
+
     在 VS Code 中练习 LeetCode
 
 ## uniapp-snippet
@@ -185,3 +185,7 @@
 ## VS Browser
 
     在vscode中浏览网页
+
+## rust-analyzer
+
+    对Visual Studio代码的Rust语言支持
