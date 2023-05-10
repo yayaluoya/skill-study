@@ -1,6 +1,6 @@
 <foo>
     <div></div>
-</foo>
+</foo>;
 
 interface FooProp {
     name: string;
@@ -13,4 +13,4 @@ function ComponentFoo(prop: FooProp) {
     return <AnotherComponent name={prop.name} />;
 }
 
-const Button = (prop: { value: string }, context: { color: string }) => <button></button>
+const Button = (prop: { value: string }, context: { color: string }) => <button></button>;

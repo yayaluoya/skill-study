@@ -10,13 +10,13 @@ let type = {
     altKey: true,
     shiftKey: true,
     ctrlKey: false,
-    metaKey: false
-}
+    metaKey: false,
+};
 
 function addLog(log) {
     let str = fs.readFileSync(path.join(__dirname, 'a.txt')).toString();
     str += JSON.stringify(log);
-    str += '\n'
+    str += '\n';
     fs.writeFileSync(path.join(__dirname, 'a.txt'), str);
 }
 
@@ -29,7 +29,7 @@ let f = (event) => {
             robotjs.keyTap('q');
         }, 3000);
     }
-}
+};
 
 iohook.on('keyup', () => {
     console.log('up');

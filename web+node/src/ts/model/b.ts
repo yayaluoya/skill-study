@@ -1,12 +1,12 @@
-import M111, { default as M1111, MM, M } from "./a";
+import M111, { default as M1111, MM, M } from './a';
 
-MM
+MM;
 
-/** 
+/**
  * 重新导出的语法
  */
-export { default as MM } from "./a";
-export * from "./a";
+export { default as MM } from './a';
+export * from './a';
 
 export const a = '';
 

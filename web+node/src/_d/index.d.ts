@@ -1,10 +1,10 @@
 declare module 'glob' {
-    export class A { }
+    export class A {}
 }
 
 /**
  * 普通模块是局部的
  */
 export declare module AAAA {
-    class A { }
+    class A {}
 }

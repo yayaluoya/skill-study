@@ -20,7 +20,6 @@ let void_: void;
 
 let nerver_: never;
 
-
 /** 注意他们之间可以相互赋值 */
 void_ = null_ = undefined_;
 
@@ -33,13 +32,17 @@ let b: boolean = false;
 
 b = {} as boolean;
 
-type b = { a: string, d: string } extends { a: string } ? 'c' : 'd';
-type b1 = { a: string } | { b: string } extends {
-    a: string;
-} | { b: string } | { e: string } ? 'c' : 'd'
+type b = { a: string; d: string } extends { a: string } ? 'c' : 'd';
+type b1 = { a: string } | { b: string } extends
+    | {
+          a: string;
+      }
+    | { b: string }
+    | { e: string }
+    ? 'c'
+    : 'd';
 
 const s = Symbol('a');
-
 
 // 可以用赋值关系来判断继承关系
 let __: 'a';
@@ -50,9 +53,7 @@ unknown_ = {};
 /** never是所有类型的子类型，所以它可以赋值给任何类型 */
 let c: number = nerver_;
 
-function A() {
-
-}
+function A() {}
 
 let a: typeof A = A;
 
@@ -88,21 +89,21 @@ function isB(a: Bird | Fish | A | Array<any> | CA): a is Bird {
     return true;
 }
 if (isB(pet)) {
-    pet.fly()
+    pet.fly();
 }
 
 class CA {
     b: string;
-    a() { }
+    a() {}
 }
 
 let aaa: A | Bird | Array<any> | CA;
 
 if (isB(aaa)) {
-    aaa.fly()
+    aaa.fly();
 }
 if (aaa instanceof Array) {
-    aaa
+    aaa;
 }
 if (aaa instanceof CA) {
     aaa.a();
@@ -122,18 +123,18 @@ type Exclude_<A, B> = A extends B ? never : A;
 type NonNullable_<A> = A extends undefined | null ? never : A;
 type ReturnType_<T> = T extends (...args) => infer R ? R : void;
 
-type T00 = Exclude_<"a" | "b" | "c" | "d", "a" | "c" | "f">;  // "b" | "d"
-type T04 = NonNullable_<string | number | undefined>;  // string | number
-type T10 = ReturnType_<() => string>;  // string
+type T00 = Exclude_<'a' | 'b' | 'c' | 'd', 'a' | 'c' | 'f'>; // "b" | "d"
+type T04 = NonNullable_<string | number | undefined>; // string | number
+type T10 = ReturnType_<() => string>; // string
 type ReturnType2 = ReturnType<any>;
 type new2 = new (...args) => any;
 // type new2 = { new(...args): any };
-type T11 = Parameters<(s: string) => void>;  // void
+type T11 = Parameters<(s: string) => void>; // void
 let T11_: T11 = [''];
 type TTTT = [string, number];
 
 type A12 = {
-    a: string
+    a: string;
 };
 
 type a__ = typeof A;

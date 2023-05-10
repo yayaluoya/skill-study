@@ -1,5 +1,5 @@
 export default {
     a: '',
-}
+};
 
-export class RootDirsA { }
+export class RootDirsA {}

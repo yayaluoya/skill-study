@@ -14,8 +14,8 @@ enum BooleanLikeHeterogeneousEnum {
     No = 1,
     No2 = 1,
     /** 字符串类型的枚举成员是不会有反向映射的，看打包后的文件就能知道 */
-    Yes = "YES",
-    Yes2 = "YES",
+    Yes = 'YES',
+    Yes2 = 'YES',
 }
 
 enum FileAccess {
@@ -25,7 +25,7 @@ enum FileAccess {
     Write = 1 << 2,
     ReadWrite = Read | Write,
     // computed member
-    G = "123".length
+    G = '123'.length,
 }
 
 /**
@@ -49,7 +49,7 @@ let value2: BooleanLikeHeterogeneousEnum.No = BooleanLikeHeterogeneousEnum.No;
 
 enum ES {
     a = 'a',
-    b = ''
+    b = '',
 }
 
 let a__: string = BooleanLikeHeterogeneousEnum.Yes;

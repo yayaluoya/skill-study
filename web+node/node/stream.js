@@ -6,8 +6,7 @@ let fsReadStream = fs.createReadStream(path.join(__dirname, './interesting/a.txt
 
 console.log(fsReadStream.readableEnded);
 
-fsReadStream
-    .pipe(fs.createWriteStream(path.join(__dirname, './interesting/b.txt')))
+fsReadStream.pipe(fs.createWriteStream(path.join(__dirname, './interesting/b.txt')));
 // .pipe(fs.createWriteStream(path.join(__dirname, './interesting/c.txt')))
 
 fsReadStream.on('data', (d) => {
@@ -23,7 +22,6 @@ setTimeout(() => {
     fsReadStream.on('data', (d) => {
         console.log('3', d.toString());
     });
-
 }, 1000);
 
 fsReadStream.on('end', () => {

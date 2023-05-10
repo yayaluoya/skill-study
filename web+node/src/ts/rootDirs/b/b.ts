@@ -1,7 +1,7 @@
-import { RootDirsA } from "./a"
+import { RootDirsA } from './a';
 
 export default {
     b: '',
-}
+};
 
-RootDirsA
+RootDirsA;

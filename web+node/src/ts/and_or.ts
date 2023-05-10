@@ -10,8 +10,8 @@
  */
 export default {};
 
-type a = { a: string, e: string };
-type b = { a: number, b: string };
+type a = { a: string; e: string };
+type b = { a: number; b: string };
 
 type a_or_b = a | b;
 type a_and_b = a & b;
@@ -29,7 +29,7 @@ let __: a_and_b = {
 
 // type t = ('a' | 'b') & 'c'; //never
 // type t = ('a' | 'b') | 'c'; //"b" | "a" | "c"
-type t = ({ a: string } | { b: string }) & { c: string }
+type t = ({ a: string } | { b: string }) & { c: string };
 let t: t = {
     a: '',
     b: '',

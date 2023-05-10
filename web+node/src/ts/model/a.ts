@@ -1,5 +1,5 @@
-export default class M { }
+export default class M {}
 
 export { M };
 
-export { M as MM }
+export { M as MM };

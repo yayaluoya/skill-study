@@ -1,3 +1,3 @@
 declare var TEST: any;
 
-declare interface ITest { }
+declare interface ITest {}

@@ -1,3 +1,3 @@
-import $ from "../../_d/JQuery";
+import $ from '../../_d/JQuery';
 
-$("button.continue").html("Next Step...");
+$('button.continue').html('Next Step...');

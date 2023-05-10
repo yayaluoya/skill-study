@@ -18,7 +18,7 @@ console.log(v.value);
 let a: Iterable<number> = {
     *[Symbol.iterator]() {
         yield 1;
-    }
+    },
 };
 let _a = a[Symbol.iterator]();
 
@@ -39,14 +39,17 @@ type f3 = {
     (b: string): string;
 };
 
-let f3_: f3 = ((a) => {
+let f3_: f3 = (a) => {
     return a;
-});
+};
 let f3__ = f3_(1);
 
-function fun(a: () => void, a2: {
-    (): void
-}) { }
+function fun(
+    a: () => void,
+    a2: {
+        (): void;
+    },
+) {}
 
 function fun1(a: number): number;
 function fun1(a: string): string;
@@ -59,13 +62,12 @@ function fun1(a: number | string): number | string {
  * 如果是简写版的话就要写成=>如果是完整版的话就要写成{:}，因为{:}的写法是类定义的
  */
 
-
 /**
- * 
- * @param a 
- * @param b 
+ *
+ * @param a
+ * @param b
  */
-function fun2(a: any, b: any): void
+function fun2(a: any, b: any): void;
 function fun2(this: void, a = 'fasd', b: string, c?: string) {
     //
 }
@@ -84,34 +86,47 @@ y = x; // OK
 
 /**
  * 注意实现方法的签名是不可用的
- * @param b 
- * @param s 
+ * @param b
+ * @param s
  */
-function fun3(b: number | string): number | string
-function fun3(b: number | string | boolean, s?: boolean, d?: boolean): number | string | { a: string }
+function fun3(b: number | string): number | string;
+function fun3(
+    b: number | string | boolean,
+    s?: boolean,
+    d?: boolean,
+): number | string | { a: string };
 /**
  * 实现方法的类型必须是各个重载类型的并集
- * @param b 
- * @param s 
- * @returns 
+ * @param b
+ * @param s
+ * @returns
  */
 function fun3(b: number, s?: string | boolean): number | string {
     return b;
 }
-fun3(1, false)
+fun3(1, false);
 // fun3(1);// Error
 
 let fun4: (b: number) => number | string = fun3;
 fun4(1);
 
-
 /**
  * 关于函数参数双向协变性的测试代码
  */
-enum EventType { Mouse, Keyboard }
-interface Event { timestamp: number; }
-interface MouseEvent extends Event { x: number; y: number }
-interface KeyEvent extends Event { keyCode: number }
+enum EventType {
+    Mouse,
+    Keyboard,
+}
+interface Event {
+    timestamp: number;
+}
+interface MouseEvent extends Event {
+    x: number;
+    y: number;
+}
+interface KeyEvent extends Event {
+    keyCode: number;
+}
 
 function listenEvent(eventType: EventType, handler: (n: Event, c: string) => void) {
     /* ... */
@@ -121,8 +136,12 @@ function listenEvent(eventType: EventType, handler: (n: Event, c: string) => voi
 listenEvent(EventType.Mouse, (e: MouseEvent) => console.log(e.x + ',' + e.y));
 
 // Undesirable alternatives in presence of soundness
-listenEvent(EventType.Keyboard, (e: KeyEvent) => console.log((<KeyEvent>e).keyCode + ',' + (<KeyEvent>e).keyCode));
-listenEvent(EventType.Mouse, <(e: Event) => void>((e: MouseEvent) => console.log(e.x + ',' + e.y)));
+listenEvent(EventType.Keyboard, (e: KeyEvent) =>
+    console.log((<KeyEvent>e).keyCode + ',' + (<KeyEvent>e).keyCode),
+);
+listenEvent(EventType.Mouse, <(e: Event) => void>(
+    ((e: MouseEvent) => console.log(e.x + ',' + e.y))
+));
 
 // Still disallowed (clear error). Type safety enforced for wholly incompatible types
 // listenEvent(EventType.Mouse, (e: number) => console.log(e));

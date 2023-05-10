@@ -7,8 +7,8 @@ const http = require('http');
 const cors = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Headers': '*',
-    'Access-Control-Allow-Methods': '*'
-}
+    'Access-Control-Allow-Methods': '*',
+};
 
 http.createServer((req, res) => {
     console.log(req.method);
@@ -28,7 +28,6 @@ http.createServer((req, res) => {
             break;
     }
     res.end('哈哈哈');
-})
-    .listen(1234);
+}).listen(1234);
 
 console.log(`http://localhost:${1234}`);

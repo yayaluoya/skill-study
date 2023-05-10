@@ -10,25 +10,32 @@ const path = require('path');
 http.createServer((req, res) => {
     res.writeHead(200, {});
     setTimeout(() => {
-        res.end(JSON.stringify({
-            url: req.url,
-            time: Date.now(),
-        }));
+        res.end(
+            JSON.stringify({
+                url: req.url,
+                time: Date.now(),
+            }),
+        );
     }, 100);
 }).listen(2001);
 
-spdy.createServer({
-    key: fs.readFileSync(path.join(__dirname, './pem/privkey.pem')),
-    cert: fs.readFileSync(path.join(__dirname, './pem/cacert.pem')),
-}, (req, res) => {
-    res.writeHead(200, {});
-    setTimeout(() => {
-        res.end(JSON.stringify({
-            url: req.url,
-            time: Date.now(),
-        }));
-    }, 100);
-}).listen(2002);
+spdy.createServer(
+    {
+        key: fs.readFileSync(path.join(__dirname, './pem/privkey.pem')),
+        cert: fs.readFileSync(path.join(__dirname, './pem/cacert.pem')),
+    },
+    (req, res) => {
+        res.writeHead(200, {});
+        setTimeout(() => {
+            res.end(
+                JSON.stringify({
+                    url: req.url,
+                    time: Date.now(),
+                }),
+            );
+        }, 100);
+    },
+).listen(2002);
 
 console.log(`http1的服务 http://localhost:2001`);
 console.log(`http2的服务 http://localhost:2002`);

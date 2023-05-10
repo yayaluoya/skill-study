@@ -1,4 +1,4 @@
-declare module "url1" {
+declare module 'url1' {
     export interface Url {
         protocol?: string;
         hostname?: string;

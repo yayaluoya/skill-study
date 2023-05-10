@@ -1,1 +1,1 @@
-<AnotherComponent name={""} />
+<AnotherComponent name={''} />;

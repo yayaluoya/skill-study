@@ -1,4 +1,4 @@
-export class A<T>{
+export class A<T> {
     a: T;
 
     /** 静态成员不能引用类类型参数。 */
@@ -27,7 +27,7 @@ function getProperty<T, K extends keyof T>(obj: T, key: K) {
 
 let x = { a: 1, b: 2, c: 3, d: 4 };
 
-getProperty(x, "a"); // okay
+getProperty(x, 'a'); // okay
 getProperty(x, 'b'); // error: Argument of type 'm' isn't assignable to 'a' | 'b' | 'c' | 'd'.
 
 interface Empty<T> {
@@ -37,4 +37,4 @@ interface Empty<T> {
 let x1: Empty<number>;
 let y1: Empty<string>;
 
-x1 = y1;  // OK, because y matches structure of x
+x1 = y1; // OK, because y matches structure of x

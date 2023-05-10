@@ -1,5 +1,5 @@
-import { I } from "./i2";
+import { I } from './i2';
 
 let i: I;
 
-i.b
+i.b;

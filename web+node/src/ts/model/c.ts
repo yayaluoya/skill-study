@@ -1,3 +1,3 @@
-import { MM } from "./b";
+import { MM } from './b';
 
-MM
+MM;

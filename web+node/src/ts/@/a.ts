@@ -1,7 +1,7 @@
 function DD() {
     return function (v) {
         console.log(v);
-    }
+    };
 }
 
 @DD()

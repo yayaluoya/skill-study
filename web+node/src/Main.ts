@@ -1,9 +1,9 @@
-import "./Function";
+import './Function';
 
-import "./ES13";
-import "./ts/metadata"
+import './ES13';
+import './ts/metadata';
 console.log('hello word');
-import G from "glob";
+import G from 'glob';
 
 // let test = TEST;
 
@@ -12,7 +12,7 @@ let a: G.A;
 
 let i_m: ITest;
 
-import "./ts/enum";
+import './ts/enum';
 
 class AAA {
     a: string;
@@ -29,9 +29,9 @@ class AAA {
     }
 }
 
-class AAAA extends AAA { }
+class AAAA extends AAA {}
 
-console.log(AAA.prototype)
+console.log(AAA.prototype);
 
 // new AAA();
 

@@ -1,4 +1,4 @@
-import "./i1";
+import './i1';
 
 export interface I {
     b: string;
