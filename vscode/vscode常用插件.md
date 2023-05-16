@@ -189,3 +189,11 @@
 ## rust-analyzer
 
     对Visual Studio代码的Rust语言支持
+
+## Auto Import
+
+    可以自动找到、解析所有可用的导入，并提供代码操作和完成。
+
+## Thunder Client
+
+    Rest API 调试工具，不用再使用臃肿的 PostMan 了
