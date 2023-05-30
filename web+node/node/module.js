@@ -11,8 +11,8 @@
 当导入 CommonJS 模块 时，提供 module.exports 对象作为默认导出。 命名导出可能可用，由静态分析提供，以方便更好的生态系统兼容性。
  */
 
-// 只用通过esm或者import()的方式导入esm模块，不能用require()导入esm模块，因为ES 模块具有异步执行
-// 同步能变异步，但异步是永远不能变同步的
+// 只能通过esm或者import()的方式导入esm模块，不能用require()导入esm模块，因为ES 模块具有异步执行
+// 同步能变异步，但异步永远不能变同步
 // 至于esm为什么是异步的，因为这样更加自由，强大。更符合网络的思想
 import('./esm.mjs').then(({ default: a }) => {
     console.log('在commonJs模块中导入esm模块的内容', a);
@@ -23,3 +23,5 @@ import('./esm.mjs').then(({ default: a }) => {
 // CommonJS 模块的 ECMAScript 模块命名空间表示始终是使用 default 导出键指向 CommonJS module.exports 值的命名空间。
 
 // 在es模块中没有require这个方法了，如果要用的话需要用 module.createRequire() 构造require()方法，而且es模块中也没有__dirname,__filename了
+
+// 还有package.json中关于包的定义
