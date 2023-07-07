@@ -39,4 +39,5 @@
 - vscode 关于 vscode 使用的一些技巧和细节
 - web+node 关于 web 和 node 的学习
 - windows 关于 windows 的学习
+- webStorm 关于 webStorm 的使用，确实很智能，但是太智能了，而且对 ts 的支持没有 vscode 好
 - 面试问题 工作中涉及到的面试问题
