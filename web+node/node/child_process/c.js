@@ -9,7 +9,7 @@ const path = require('path');
 //     }),
 // );
 
-let socket = net.connect(path.join('\\\\?\\pipe', process.cwd(), 'myctl'));
+let socket = net.connect(path.join('//?/pipe/', process.cwd(), 'myctl'));
 
 socket.end(
     JSON.stringify({

@@ -20,10 +20,10 @@ let server = net
         });
         socket.on('end', () => {
             console.log('数据传输完成', data);
-            // server.close();
+            server.close();
         });
     })
-    .listen(path.join('\\\\?\\pipe', process.cwd(), 'myctl'));
+    .listen(path.join('//?/pipe/', process.cwd(), 'myctl'));
 
 // let _ = execFile('node', [path.join(__dirname, './c.js')]);
 // _.stdout.on('data', (d) => {
