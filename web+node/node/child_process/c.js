@@ -12,7 +12,7 @@ const path = require('path');
 let socket = net.connect(path.join('//?/pipe/', process.cwd(), 'myctl'));
 
 socket.end(
-    JSON.stringify({
-        msg: 'c.js向父组件发送消息',
-    }),
+  JSON.stringify({
+    msg: 'c.js向父组件发送消息',
+  }),
 );

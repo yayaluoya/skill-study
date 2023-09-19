@@ -1,34 +1,34 @@
-const ALY = require("aliyun-sdk");
-const accessKeyC = require("../.local/accessKey");
+const ALY = require('aliyun-sdk');
+const accessKeyC = require('../.local/accessKey');
 
 var sls = new ALY.SLS({
   accessKeyId: accessKeyC.accessKeyId,
   secretAccessKey: accessKeyC.accessKeySecret,
   //日志服务的域名。此处以杭州为例，其它地域请根据实际情况填写。
-  endpoint: "http://cn-hangzhou.log.aliyuncs.com",
+  endpoint: 'http://cn-hangzhou.log.aliyuncs.com',
   //SDK版本号，固定值。
-  apiVersion: "2015-06-01",
+  apiVersion: '2015-06-01',
 });
 
 // 必选，Project名称。
-const projectName = "oss-log-yayaluoya-test-1234567890";
+const projectName = 'oss-log-yayaluoya-test-1234567890';
 // 必选，Logstore名称。
-const logstoreName = "logstore_test";
+const logstoreName = 'logstore_test';
 
 // 创建Project。
 function createProject() {
   const param = {
     projectDetail: {
       projectName,
-      description: "description about project",
+      description: 'description about project',
     },
   };
 
   sls.createProject(param, function (err, data) {
     if (err) {
-      console.error("error:", err);
+      console.error('error:', err);
     } else {
-      console.log("创建project", data);
+      console.log('创建project', data);
     }
   });
 }
@@ -50,7 +50,7 @@ function createLogStore() {
     if (err) {
       console.log(err);
     } else {
-      console.log("创建LogStore", data);
+      console.log('创建LogStore', data);
     }
   });
 }
@@ -61,8 +61,8 @@ function createIndex() {
     logstoreName,
     indexDetail: {
       line: {
-        token: [";"],
-        include_keys: ["key2", "key3"],
+        token: [';'],
+        include_keys: ['key2', 'key3'],
         caseSensitive: false,
       },
     },
@@ -72,7 +72,7 @@ function createIndex() {
     if (err) {
       console.log(err);
     } else {
-      console.log("为logStore创建索引成功", data);
+      console.log('为logStore创建索引成功', data);
     }
   });
 }
@@ -87,22 +87,22 @@ function writeLog() {
         {
           time: Math.floor(new Date().getTime() / 1000),
           contents: [
-            { key: "a", value: "1" },
-            { key: "a", value: "2" },
-            { key: "a", value: "3" },
+            { key: 'a', value: '1' },
+            { key: 'a', value: '2' },
+            { key: 'a', value: '3' },
           ],
         },
       ],
-      topic: "vv",
-      source: "127.0.0.1",
+      topic: 'vv',
+      source: '127.0.0.1',
     },
   };
 
   sls.putLogs(param, function (err, data) {
     if (err) {
-      console.error("error:", err);
+      console.error('error:', err);
     } else {
-      console.log("写入日志成功", data);
+      console.log('写入日志成功', data);
     }
   });
 }
@@ -123,16 +123,16 @@ function queryLog() {
     // 必选，结束时间，精度为秒。
     to,
     // 可选，指定日志主题。
-    topic: "",
+    topic: '',
     // 可选，查询的关键词，不输入则查询全部日志数据。
-    query: "",
+    query: '',
   };
 
   sls.getLogs(param, function (err, data) {
     if (err) {
-      console.error("error:", err);
+      console.error('error:', err);
     } else {
-      console.log("查询近一个小时的日志", data);
+      console.log('查询近一个小时的日志', data);
     }
   });
 }

@@ -5,14 +5,14 @@ import { Observable } from './observable';
  *
  */
 declare module './observable' {
-    interface Observable<T> {
-        aaa(): string;
-    }
+  interface Observable<T> {
+    aaa(): string;
+  }
 }
 
 Observable.prototype.aaa = function () {
-    // ... another exercise for the reader
-    return 'c';
+  // ... another exercise for the reader
+  return 'c';
 };
 
 let o = new Observable();

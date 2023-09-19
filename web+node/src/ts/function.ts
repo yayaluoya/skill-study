@@ -4,11 +4,11 @@
  * Iterator 迭代器
  */
 function* i(): IterableIterator<number> {
-    let a: number;
-    while (true) {
-        a++;
-        yield a;
-    }
+  let a: number;
+  while (true) {
+    a++;
+    yield a;
+  }
 }
 
 let _i = i();
@@ -16,9 +16,9 @@ let v = _i.next();
 console.log(v.value);
 
 let a: Iterable<number> = {
-    *[Symbol.iterator]() {
-        yield 1;
-    },
+  *[Symbol.iterator]() {
+    yield 1;
+  },
 };
 let _a = a[Symbol.iterator]();
 
@@ -28,33 +28,33 @@ export default {};
 let f: () => void;
 /** 完整版的调用签名，因为函数是一个可调用对象，所有用对象的形式来描述调用签名才能实现最多功能 */
 let f2: {
-    (): void;
-    (): number;
+  (): void;
+  (): number;
 };
 
 type f2_ = typeof f2;
 
 type f3 = {
-    (a: number): number;
-    (b: string): string;
+  (a: number): number;
+  (b: string): string;
 };
 
 let f3_: f3 = (a) => {
-    return a;
+  return a;
 };
 let f3__ = f3_(1);
 
 function fun(
-    a: () => void,
-    a2: {
-        (): void;
-    },
+  a: () => void,
+  a2: {
+    (): void;
+  },
 ) {}
 
 function fun1(a: number): number;
 function fun1(a: string): string;
 function fun1(a: number | string): number | string {
-    return a;
+  return a;
 }
 
 /**
@@ -69,13 +69,13 @@ function fun1(a: number | string): number | string {
  */
 function fun2(a: any, b: any): void;
 function fun2(this: void, a = 'fasd', b: string, c?: string) {
-    //
+  //
 }
 
 let el = document.createElement('div');
 
 el.addEventListener('click', function (this: string) {
-    console.log(this);
+  console.log(this);
 });
 
 let x = (a: number): string => '';
@@ -91,9 +91,9 @@ y = x; // OK
  */
 function fun3(b: number | string): number | string;
 function fun3(
-    b: number | string | boolean,
-    s?: boolean,
-    d?: boolean,
+  b: number | string | boolean,
+  s?: boolean,
+  d?: boolean,
 ): number | string | { a: string };
 /**
  * 实现方法的类型必须是各个重载类型的并集
@@ -102,7 +102,7 @@ function fun3(
  * @returns
  */
 function fun3(b: number, s?: string | boolean): number | string {
-    return b;
+  return b;
 }
 fun3(1, false);
 // fun3(1);// Error
@@ -114,22 +114,22 @@ fun4(1);
  * 关于函数参数双向协变性的测试代码
  */
 enum EventType {
-    Mouse,
-    Keyboard,
+  Mouse,
+  Keyboard,
 }
 interface Event {
-    timestamp: number;
+  timestamp: number;
 }
 interface MouseEvent extends Event {
-    x: number;
-    y: number;
+  x: number;
+  y: number;
 }
 interface KeyEvent extends Event {
-    keyCode: number;
+  keyCode: number;
 }
 
 function listenEvent(eventType: EventType, handler: (n: Event, c: string) => void) {
-    /* ... */
+  /* ... */
 }
 
 // Unsound, but useful and common
@@ -137,10 +137,10 @@ listenEvent(EventType.Mouse, (e: MouseEvent) => console.log(e.x + ',' + e.y));
 
 // Undesirable alternatives in presence of soundness
 listenEvent(EventType.Keyboard, (e: KeyEvent) =>
-    console.log((<KeyEvent>e).keyCode + ',' + (<KeyEvent>e).keyCode),
+  console.log((<KeyEvent>e).keyCode + ',' + (<KeyEvent>e).keyCode),
 );
 listenEvent(EventType.Mouse, <(e: Event) => void>(
-    ((e: MouseEvent) => console.log(e.x + ',' + e.y))
+  ((e: MouseEvent) => console.log(e.x + ',' + e.y))
 ));
 
 // Still disallowed (clear error). Type safety enforced for wholly incompatible types
@@ -151,7 +151,7 @@ listenEvent(EventType.Mouse, <(e: Event) => void>(
  */
 
 function invokeLater(args: any[], callback: (...args: any[]) => void) {
-    /* ... Invoke callback with 'args' ... */
+  /* ... Invoke callback with 'args' ... */
 }
 
 // Unsound - invokeLater "might" provide any number of arguments

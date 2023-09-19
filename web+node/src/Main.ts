@@ -15,18 +15,18 @@ let i_m: ITest;
 import './ts/enum';
 
 class AAA {
-    a: string;
-    b: number = (function () {
-        console.log('b属性初始化');
-        return 10;
-    })();
-    constructor() {
-        this.a = 'a';
-        this.b = 1;
-    }
-    f() {
-        return this.a;
-    }
+  a: string;
+  b: number = (function () {
+    console.log('b属性初始化');
+    return 10;
+  })();
+  constructor() {
+    this.a = 'a';
+    this.b = 1;
+  }
+  f() {
+    return this.a;
+  }
 }
 
 class AAAA extends AAA {}

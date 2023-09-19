@@ -4,7 +4,8 @@
 
 const http = require('http');
 
-http.createServer((req, res) => {
+http
+  .createServer((req, res) => {
     res.writeHead(200, {});
     res.end('hello world\n');
     // setTimeout(() => {
@@ -16,4 +17,5 @@ http.createServer((req, res) => {
     //         }),
     //     );
     // }, 100);
-}).listen(2001);
+  })
+  .listen(2001);

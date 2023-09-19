@@ -7,18 +7,18 @@ const net = require('node:net');
 let s1 = new net.Socket();
 
 s1.on('data', (d) => {
-    console.log('s1d->', d.toString());
+  console.log('s1d->', d.toString());
 });
 
 s1.on('error', (err) => {
-    console.log('error->', err);
+  console.log('error->', err);
 });
 
 s1.on('close', (err) => {
-    console.log('close->', err);
+  console.log('close->', err);
 });
 
 s1.connect({
-    port: 8124,
-    host: 'localhost',
+  port: 8124,
+  host: 'localhost',
 });

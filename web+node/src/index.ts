@@ -8,7 +8,7 @@ AAAA.A;
  * 关于类静态部分和实例部分类型的验证
  */
 class A {
-    constructor(a: string) {}
+  constructor(a: string) {}
 }
 
 type AC = typeof A;

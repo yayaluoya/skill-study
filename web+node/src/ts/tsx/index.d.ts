@@ -1,7 +1,7 @@
 declare namespace JSX {
-    interface IntrinsicElements {
-        foo: any;
-        div: any;
-        button: any;
-    }
+  interface IntrinsicElements {
+    foo: any;
+    div: any;
+    button: any;
+  }
 }

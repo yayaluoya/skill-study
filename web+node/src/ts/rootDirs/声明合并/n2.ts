@@ -1,3 +1,3 @@
 export namespace N {
-    export class C1 {}
+  export class C1 {}
 }

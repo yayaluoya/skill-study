@@ -1,10 +1,10 @@
 function DD() {
-    return function (v) {
-        console.log(v);
-    };
+  return function (v) {
+    console.log(v);
+  };
 }
 
 @DD()
 class DDD {
-    private a: string;
+  private a: string;
 }

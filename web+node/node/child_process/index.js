@@ -15,63 +15,63 @@ console.log(process.env.ComSpec);
 
 /** 打开一个新的cmd窗口 */
 function f1() {
-    // let childP = child_process.exec('start cmd /k "node -v"', {
-    //     // shell: true,
-    //     detached: true,//父子进程分离
-    // });
+  // let childP = child_process.exec('start cmd /k "node -v"', {
+  //     // shell: true,
+  //     detached: true,//父子进程分离
+  // });
 
-    // let childP = child_process.spawn('cmd.exe', [
-    //     '/k',
-    //     `"node F:/work/_/skill-study/shell/src/js.js"`,
-    // ], {
-    //     shell: true,
-    //     /**
-    //      * 在 Windows 上，设置 options.detached 为 true 可以使子进程在父进程退出后继续运行。 子进程有自己的控制台窗口。 一旦启用一个子进程，它将不能被禁用。
-    //      */
-    //     detached: true,
-    // });
+  // let childP = child_process.spawn('cmd.exe', [
+  //     '/k',
+  //     `"node F:/work/_/skill-study/shell/src/js.js"`,
+  // ], {
+  //     shell: true,
+  //     /**
+  //      * 在 Windows 上，设置 options.detached 为 true 可以使子进程在父进程退出后继续运行。 子进程有自己的控制台窗口。 一旦启用一个子进程，它将不能被禁用。
+  //      */
+  //     detached: true,
+  // });
 
-    // let childP = child_process.spawn('node F:/work/_/skill-study/shell/src/js.js', {
-    //     shell: true,
-    //     detached: true,
-    // });
+  // let childP = child_process.spawn('node F:/work/_/skill-study/shell/src/js.js', {
+  //     shell: true,
+  //     detached: true,
+  // });
 
-    let childP = child_process.spawn('cmd /k node -v', {
-        shell: true,
-        detached: true,
-    });
+  let childP = child_process.spawn('cmd /k node -v', {
+    shell: true,
+    detached: true,
+  });
 
-    childP.stdout.on('data', (data) => {
-        console.log(data.toString());
-        fs.writeFileSync(path.join(__dirname, 'log.txt'), data);
-    });
-    childP.stderr.on('data', (data) => {
-        console.log(data.toString());
-        fs.writeFileSync(path.join(__dirname, 'log.txt'), data);
-    });
+  childP.stdout.on('data', (data) => {
+    console.log(data.toString());
+    fs.writeFileSync(path.join(__dirname, 'log.txt'), data);
+  });
+  childP.stderr.on('data', (data) => {
+    console.log(data.toString());
+    fs.writeFileSync(path.join(__dirname, 'log.txt'), data);
+  });
 }
 
 function f2() {
-    const ls = child_process.spawn('cmd', {
-        // cwd: path.dirname(__dirname),
-        cwd: 'F:/work',
-    });
+  const ls = child_process.spawn('cmd', {
+    // cwd: path.dirname(__dirname),
+    cwd: 'F:/work',
+  });
 
-    ls.stdout.on('data', (data) => {
-        console.log(`stdout: ${data}`);
-    });
+  ls.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
 
-    ls.stderr.on('data', (data) => {
-        console.error(`stderr: ${data}`);
-    });
+  ls.stderr.on('data', (data) => {
+    console.error(`stderr: ${data}`);
+  });
 
-    ls.on('close', (code) => {
-        console.log(`子进程退出，退出码 ${code}`);
-    });
+  ls.on('close', (code) => {
+    console.log(`子进程退出，退出码 ${code}`);
+  });
 
-    setTimeout(() => {
-        ls.stdin.write('echo hhh\n');
-    }, 1000);
+  setTimeout(() => {
+    ls.stdin.write('echo hhh\n');
+  }, 1000);
 }
 
 f1();

@@ -1,16 +1,16 @@
 export class A<T> {
-    a: T;
+  a: T;
 
-    /** 静态成员不能引用类类型参数。 */
-    // static get():T{}
+  /** 静态成员不能引用类类型参数。 */
+  // static get():T{}
 }
 
 interface GenericIdentityFn<T> {
-    (arg: T): T;
+  (arg: T): T;
 }
 
 function identity<T>(arg: T): T {
-    return arg;
+  return arg;
 }
 
 /**
@@ -22,7 +22,7 @@ let myIdentity: GenericIdentityFn<number> = identity;
 myIdentity(1);
 
 function getProperty<T, K extends keyof T>(obj: T, key: K) {
-    return obj[key];
+  return obj[key];
 }
 
 let x = { a: 1, b: 2, c: 3, d: 4 };
@@ -31,8 +31,8 @@ getProperty(x, 'a'); // okay
 getProperty(x, 'b'); // error: Argument of type 'm' isn't assignable to 'a' | 'b' | 'c' | 'd'.
 
 interface Empty<T> {
-    a: string;
-    // b: T;
+  a: string;
+  // b: T;
 }
 let x1: Empty<number>;
 let y1: Empty<string>;

@@ -17,21 +17,21 @@ type a_or_b = a | b;
 type a_and_b = a & b;
 
 let _: a_or_b = {
-    a: 1,
-    b: '',
+  a: 1,
+  b: '',
 };
 
 let __: a_and_b = {
-    a: 1 as never,
-    e: '',
-    b: '',
+  a: 1 as never,
+  e: '',
+  b: '',
 };
 
 // type t = ('a' | 'b') & 'c'; //never
 // type t = ('a' | 'b') | 'c'; //"b" | "a" | "c"
 type t = ({ a: string } | { b: string }) & { c: string };
 let t: t = {
-    a: '',
-    b: '',
-    c: '',
+  a: '',
+  b: '',
+  c: '',
 };

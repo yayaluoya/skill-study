@@ -15,7 +15,7 @@
 // 同步能变异步，但异步永远不能变同步
 // 至于esm为什么是异步的，因为这样更加自由，强大。更符合网络的思想
 import('./esm.mjs').then(({ default: a }) => {
-    console.log('在commonJs模块中导入esm模块的内容', a);
+  console.log('在commonJs模块中导入esm模块的内容', a);
 });
 
 //当使用 import 关键字解析相对或绝对的说明符时，必须提供文件扩展名。 还必须完全指定目录索引（例如 './startup/index.js'）。

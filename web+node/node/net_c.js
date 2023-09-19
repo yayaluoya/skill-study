@@ -5,22 +5,22 @@ const net = require('node:net');
  */
 
 let c = net.connect({
-    port: 8124,
-    host: 'localhost',
+  port: 8124,
+  host: 'localhost',
 });
 
 c.on('connect', () => {
-    console.log('connect');
+  console.log('connect');
 });
 
 c.on('data', (d) => {
-    console.log('data->', d.toString());
+  console.log('data->', d.toString());
 });
 
 c.on('close', () => {
-    console.log('close');
+  console.log('close');
 });
 
 c.on('error', (err) => {
-    console.log('error->', err);
+  console.log('error->', err);
 });

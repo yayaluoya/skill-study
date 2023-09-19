@@ -1,5 +1,5 @@
 export default {
-    a: '',
+  a: '',
 };
 
 export class RootDirsA {}

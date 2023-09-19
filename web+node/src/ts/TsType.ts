@@ -34,13 +34,13 @@ b = {} as boolean;
 
 type b = { a: string; d: string } extends { a: string } ? 'c' : 'd';
 type b1 = { a: string } | { b: string } extends
-    | {
-          a: string;
-      }
-    | { b: string }
-    | { e: string }
-    ? 'c'
-    : 'd';
+  | {
+      a: string;
+    }
+  | { b: string }
+  | { e: string }
+  ? 'c'
+  : 'd';
 
 const s = Symbol('a');
 
@@ -58,18 +58,18 @@ function A() {}
 let a: typeof A = A;
 
 interface Bird {
-    fly();
-    layEggs(n: { a: string });
+  fly();
+  layEggs(n: { a: string });
 }
 
 interface Fish {
-    swim();
-    layEggs(s: { b: string });
+  swim();
+  layEggs(s: { b: string });
 }
 
 function getSmallPet(): Bird | Fish {
-    // ...
-    return {} as any;
+  // ...
+  return {} as any;
 }
 
 let pet = getSmallPet();
@@ -80,40 +80,40 @@ let pet = getSmallPet();
  * 其实这是理所应当的
  */
 pet.layEggs({
-    a: '',
-    b: '',
+  a: '',
+  b: '',
 }); // okay
 // pet.swim();    // errors
 
 function isB(a: Bird | Fish | A | Array<any> | CA): a is Bird {
-    return true;
+  return true;
 }
 if (isB(pet)) {
-    pet.fly();
+  pet.fly();
 }
 
 class CA {
-    b: string;
-    a() {}
+  b: string;
+  a() {}
 }
 
 let aaa: A | Bird | Array<any> | CA;
 
 if (isB(aaa)) {
-    aaa.fly();
+  aaa.fly();
 }
 if (aaa instanceof Array) {
-    aaa;
+  aaa;
 }
 if (aaa instanceof CA) {
-    aaa.a();
-    aaa.b;
+  aaa.a();
+  aaa.b;
 }
 
 interface AA {
-    a: string;
-    b: number;
-    [key: string]: string | number;
+  a: string;
+  b: number;
+  [key: string]: string | number;
 }
 type a = AA[keyof AA];
 let _a: a = 'a';
@@ -134,7 +134,7 @@ let T11_: T11 = [''];
 type TTTT = [string, number];
 
 type A12 = {
-    a: string;
+  a: string;
 };
 
 type a__ = typeof A;

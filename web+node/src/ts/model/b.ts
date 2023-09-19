@@ -11,7 +11,7 @@ export * from './a';
 export const a = '';
 
 function v(): number | string | boolean | Record<string, any> | symbol | Array<any> {
-    return 'fasd';
+  return 'fasd';
 }
 
 export default v();
