@@ -151,3 +151,14 @@ function seriousalize(key, object) {
 let customV;
 
 customV.s;
+
+/**
+ * @typedef AAA
+ * @type {{a: string,b:number}}
+ */
+
+// let a:AAA
+/** @type {AAA} */
+let aaa;
+aaa.a;
+aaa.b;
