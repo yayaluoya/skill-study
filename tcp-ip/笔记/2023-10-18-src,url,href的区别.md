@@ -39,5 +39,5 @@
 #### 理解
 
 url 全球资源定位器(Uniform Resource Locator)，就是代表资源的，不会做处理什么处理，直接在浏览器url输入框输入就行了
-src 全称Source Code 就是资源代码的意思，从资源来理解就很接近url的意思，代码呢就是说它还会被处理一下，所以img，script，iframe等会用src
+src 全称Source Code 就是源代码的意思，从source来理解就很接近url的意思，代码呢就是说它还会被处理一下，所以img，script，iframe等会用src
 href 是HypertextReference的缩写，意思是超文本引用,所以a，link标签会用它
