@@ -6,8 +6,11 @@ const http = require('http');
 
 http
   .createServer((req, res) => {
-    res.writeHead(200, {});
-    res.end('hello world\n');
+    let str = 'hello world\n';
+    res.writeHead(200, {
+      'Content-Length': str.length,
+    });
+    res.end(str);
     // setTimeout(() => {
     //     res.end(
     //         JSON.stringify({
