@@ -22,6 +22,7 @@
 
 - algorithm 关于算法图解和算法导论和对算法的学习，里面包含学习笔记和实践代码
 - browser 关于浏览器使用中的细节和发现
+- computer 计算机的学习
 - docker 关于 docker 的学习和使用技巧
 - english 学习英语
 - linux 关于 linux 的学习和使用技巧
