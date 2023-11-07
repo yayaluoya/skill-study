@@ -89,6 +89,7 @@ y = x; // OK
  * @param b
  * @param s
  */
+function fun3(b: number, c: string): number;
 function fun3(b: number | string): number | string;
 function fun3(
   b: number | string | boolean,
@@ -96,12 +97,16 @@ function fun3(
   d?: boolean,
 ): number | string | { a: string };
 /**
- * 实现方法的类型必须是各个重载类型的并集
+ * 实现方法的类型必须是各个重载类型的子类型
+ * 函数的父子类型区分：
+ * - 子类型函数可以少参数，因为在调用中必须保证父类型能接受足够的参数而不用管子类型用不用。
+ * - 参数位置对应的类型必须双向协变，就是说能形成父子关系，而不管谁是父类型谁是子类型
+ * - 子类型函数返回值必须是父类型函数返回值的子类型
  * @param b
  * @param s
  * @returns
  */
-function fun3(b: number, s?: string | boolean): number | string {
+function fun3(b: number, s?: string | boolean): number {
   return b;
 }
 fun3(1, false);
