@@ -44,6 +44,11 @@ type b1 = { a: string } | { b: string } extends
 type b2 = 'a' extends 'a' | 'b' ? 'a' : 'b';
 type b3 = 'a' | 'b' extends { a: string } & ('a' | 'b') ? 'a' : 'b';
 type b4 = { a: string; d: string } extends { a: string | number } ? 'a' : 'b';
+type b5 = { a: string; d: string } extends { a: string } & { d: string } ? 'a' : 'b';
+type b6 = { a: string; c: number } & { d: string } extends { a: string; d: string }
+  ? 'a'
+  : 'b';
+type b7 = string extends string ? 'a' : 'b';
 
 const s = Symbol('a');
 
@@ -52,8 +57,8 @@ const s = Symbol('a');
  * 关于类型兼容性的判断，对不同结构的类型方式是不一样的，比如联合类型和交叉类型和函数，他们的类型兼容性判断就有所不同
  * 基础类型 比较多，见文档中的表或图片../../images/Quicker_20231108_095657.png
  * 属性成员类型，若类型a的所有属性都能在类型b中找到且类型b的属性类型都是类型a属性对应类型的子类型则类型b是类型a的子类型
- * 联合类型 若类型s的所有类型都是类型t的子类型，则s是t的子类型
- * 交叉类型 若类型s的任意类型是类型t的子类型，则s是t的子类型
+ * 联合类型 若类型s的所有成员类型都是类型t的子类型，则s是t的子类型
+ * 交叉类型 若类型s的任意成员类型是类型t的子类型，则s是t的子类型
  * 函数类型 比较复杂，见文档
  * 泛型 见文档
  */
