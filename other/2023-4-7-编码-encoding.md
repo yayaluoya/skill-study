@@ -28,7 +28,7 @@ ANSI 编码是一种对 ASCII 码的拓展：ANSI 编码用 0x00~0x7f （即十�
 \u 开头的就是 unicode 编码
 因为世界国家很多，每个国家都定义一套自己的编码标准，结果相互之间谁也不懂谁的编码，就无法进行很好的沟通交流，所以及时的出现了一个组织 ISO（国际标准化组织）决定定义一套编码方案来解决所有国家的编码问题，这个新的编码方案就叫做 Unicode。注意 Unicode 不是一个新的编码规则，Unicode 只是一个用来映射字符和数字的标准，是一套字符集（为每一个「字符」分配一个唯一的 ID（学名为码位 / 码点 / Code Point）），可以将 Unicode 理解为一本世界编码的字典。
 Unicode 编码与 ASCII 编码方式兼容
-unicode 有几种字符集，ucs-2 双字节表示，ucs4 四字节表示
+unicode 有几种字符集，ucs-2 双字节表示，ucs4 四字节表示 (ucs 通用字符集（UniversalCharacterSet）)
 
 #### UTF-8
 
