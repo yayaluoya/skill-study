@@ -11,6 +11,7 @@ let c = net.connect({
 
 c.on('connect', () => {
   console.log('connect');
+  c.write('嘿嘿嘿');
 });
 
 c.on('data', (d) => {

@@ -14,6 +14,7 @@ const server = net.createServer((c) => {
     console.log('error-connect->', err);
   });
   c.write('hello\r\n');
+  // 这里注意c是一个双工流
   c.pipe(c);
 });
 server.on('error', (err) => {
@@ -25,6 +26,7 @@ server.listen(8124, () => {
 
 server.on('connection', (c) => {
   console.log('connection');
+  // 这里的写入和createServer时的处理方法一样是同步执行的
   c.write('哈哈');
 });
 
