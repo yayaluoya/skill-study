@@ -118,7 +118,15 @@ if (isB(pet)) {
 class CA {
   b: string;
   a() {}
+  static A: string;
 }
+
+/**
+ * 关于索引访问操作符的使用，它和.的使用不一样
+ * 所有用.的地方都用用[]代替，但访问某个具体属性的类型时只能通过索引访问操作符来访问
+ */
+type a____ = CA['b'];
+type a____1 = (typeof CA)['A'];
 
 let aaa: A | Bird | Array<any> | CA;
 
