@@ -127,6 +127,12 @@ class CA {
  */
 type a____ = CA['b'];
 type a____1 = (typeof CA)['A'];
+let interfaceT = {
+  a: class A {
+    a: string;
+  },
+};
+type a____2 = (typeof interfaceT)['a'];
 
 let aaa: A | Bird | Array<any> | CA;
 
