@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span>这是一个页面</span>
+    <span class="b">用来探究浏览器的回流和重绘</span>
+    <div class="a" style="background-color: red; width: 50px; height: 20px"></div>
+
+    <script>
+      setTimeout(() => {
+        let span = document.body.querySelector('span.b');
+        span.style.color = 'blue';
+      }, 2000);
+      setInterval(() => {
+        return;
+        let span = document.body.querySelector('span.b');
+        /**
+         * 根据调用栈可以看出来当触发了回流机制的时候调用getBoundingClientRect获取结果前是会重新进行布局计算的
+         * */
+        console.log(span.getBoundingClientRect().width);
+        span.textContent = span.textContent + '-';
+        console.log(span.getBoundingClientRect().width);
+        let div = document.body.querySelector('div.a');
+        div.style.height = parseInt(div.style.height || '0') + 1 + 'px';
+      }, 500);
+    </script>
+  </body>
+</html>
