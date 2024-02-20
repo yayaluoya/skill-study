@@ -21,7 +21,10 @@ const configs = [
   },
 ];
 
-configs.forEach(startItem);
+configs.forEach((item) => {
+  console.log('开始提示', item.title);
+  startItem(item);
+});
 
 /**
  * 开始一个项目
