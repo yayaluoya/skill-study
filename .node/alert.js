@@ -34,6 +34,7 @@ function startItem(item) {
   setTimeout(() => {
     console.log(item.title);
     sendMsg(item.content);
+    startItem(item);
   }, item.spaceTime);
 }
 
