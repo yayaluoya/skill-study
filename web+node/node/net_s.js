@@ -3,7 +3,6 @@ const net = require('node:net');
 /**
  * 创建tcp的服务
  */
-
 const server = net.createServer((c) => {
   // 'connection' listener.
   console.log('connect');
@@ -17,9 +16,11 @@ const server = net.createServer((c) => {
   // 这里注意c是一个双工流
   c.pipe(c);
 });
+
 server.on('error', (err) => {
   console.log('error->', err);
 });
+
 server.listen(8124, () => {
   console.log('start');
 });
