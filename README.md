@@ -34,7 +34,7 @@
 - php 关于 php 的学习
 - phthon 关于 phthon 的学习
 - redis 关于 redis 的学习
-- reg 关于正则的学习
+- regexp 关于正则的学习
 - rust 关于 rust 的学习
 - shell 关于 shell 的学习
 - ssh 关于 ssh 的学习
