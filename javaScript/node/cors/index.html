@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>测试cors</h1>
+    <img src="http://localhost:1234/png" alt="" />
+    <script>
+      fetch('http://localhost:1234/a', {
+        method: 'get',
+        mode: 'no-cors',
+        headers: {
+          fasdf: 'fasd',
+        },
+      })
+        .then((_) => _.text())
+        .then((_) => {
+          console.log(_);
+        });
+    </script>
+  </body>
+</html>
