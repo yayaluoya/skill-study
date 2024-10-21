@@ -1,14 +1,12 @@
-// @ts-check
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import express from "express";
 
-const isTest = process.env.VITEST;
-
 export async function createServer(
   root = process.cwd(),
   isProd = process.env.NODE_ENV === "production",
+  isTest = process.env.VITEST,
   hmrPort
 ) {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -34,7 +32,7 @@ export async function createServer(
     vite = await (
       await import("vite")
     ).createServer({
-      base: "/test/",
+      base: "/",
       root,
       logLevel: isTest ? "error" : "info",
       server: {
@@ -56,7 +54,7 @@ export async function createServer(
   } else {
     app.use((await import("compression")).default());
     app.use(
-      "/test/",
+      "/",
       (await import("serve-static")).default(resolve("dist/client"), {
         index: false,
       })
@@ -65,7 +63,7 @@ export async function createServer(
 
   app.use("*", async (req, res) => {
     try {
-      const url = req.originalUrl.replace("/test/", "/");
+      const url = req.originalUrl;
 
       let template, render;
       if (!isProd) {
@@ -95,12 +93,4 @@ export async function createServer(
   });
 
   return { app, vite };
-}
-
-if (!isTest) {
-  createServer().then(({ app }) =>
-    app.listen(6173, () => {
-      console.log("http://localhost:6173");
-    })
-  );
 }

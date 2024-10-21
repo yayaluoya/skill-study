@@ -1,8 +1,8 @@
 import { createServer } from "./server.js";
 
-const port = 6174;
+const port = 6173;
 
-createServer(undefined, true).then(({ app }) => {
+createServer().then(({ app }) => {
   app.listen(port, () => {
     console.log(`http://localhost:${port}`);
   });
