@@ -1,3 +1,6 @@
+.vue 文件的默认内容
+
+```vue
 <script lang="tsx">
 import { defineComponent, onMounted } from "vue";
 
@@ -9,9 +12,10 @@ export default defineComponent({
     return {};
   },
   render() {
-    return <div>About</div>;
+    return <div></div>;
   },
 });
 </script>
 
 <style scoped lang="scss"></style>
+```
