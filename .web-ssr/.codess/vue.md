@@ -8,7 +8,7 @@ export default defineComponent({
   components: {},
   props: {},
   setup() {
-    onMounted(() => {});
+    // onMounted(() => {});
     return {};
   },
   render() {

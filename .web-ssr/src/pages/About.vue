@@ -5,7 +5,6 @@ export default defineComponent({
   components: {},
   props: {},
   setup() {
-    onMounted(() => {});
     return {};
   },
   render() {

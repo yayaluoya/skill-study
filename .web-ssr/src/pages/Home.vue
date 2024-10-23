@@ -1,15 +1,17 @@
-<script lang="tsx">
-import { defineComponent, onMounted } from "vue";
+<template>
+  <div>Home</div>
+</template>
+
+<script lang="ts">
+import { useCounterStore } from "@/stores/counter";
+import { defineComponent, onMounted, ref, useSSRContext } from "vue";
 
 export default defineComponent({
   components: {},
   props: {},
-  setup() {
-    onMounted(() => {});
-    return {};
-  },
-  render() {
-    return <div>Home</div>;
+  async setup() {
+    let store = useCounterStore();
+    return { store };
   },
 });
 </script>

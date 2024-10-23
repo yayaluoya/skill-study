@@ -1,12 +1,11 @@
 <script lang="tsx">
-import { defineComponent, onMounted, KeepAlive } from "vue";
+import { defineComponent, onMounted, KeepAlive, Suspense } from "vue";
 import { RouterView } from "vue-router";
 
 export default defineComponent({
   components: {},
   props: {},
   setup() {
-    onMounted(() => {});
     return {};
   },
   render() {
@@ -17,7 +16,15 @@ export default defineComponent({
             default: ({ Component }: any) => {
               return (
                 <KeepAlive>
-                  <Component />
+                  <Suspense>
+                    {{
+                      default: () => <Component />,
+                      fallback: () => () => {
+                        console.log("fasdf");
+                        return <div>哈哈哈</div>;
+                      },
+                    }}
+                  </Suspense>
                 </KeepAlive>
               );
             },
