@@ -20,13 +20,18 @@
 
 ## 目录介绍
 
+- .node 关于node的一些常用脚本，非学习用的
+- .vscode vscode的配置文件
 - ai 关于ai的学习和ai的资料
 - algorithm 关于算法图解和算法导论和对算法的学习，里面包含学习笔记和实践代码
+- AliYun 关于阿里云的使用
 - browser 关于浏览器使用中的细节和发现
 - c c语言的学习
 - computer 计算机的学习
 - docker 关于 docker 的学习和使用技巧
 - english 学习英语
+- git 关于git的学习
+- javaScript 关于 web 和 node 的学习
 - linux 关于 linux 的学习和使用技巧
 - mysql 关于 mysql 的学习
 - nginx 关于 nginx 的学习和使用技巧
@@ -40,7 +45,10 @@
 - ssh 关于 ssh 的学习
 - tcp-ip 关于 tcp-ip 的学习
 - vscode 关于 vscode 使用的一些技巧和细节
-- javaScript 关于 web 和 node 的学习
 - windows 关于 windows 的学习
 - webStorm 关于 webStorm 的使用，确实很智能，但是太智能了，而且对 ts 的支持没有 vscode 好
 - 面试问题 工作中涉及到的面试问题
+
+#### 一些年份的文件
+
+这一年的展望和总结
