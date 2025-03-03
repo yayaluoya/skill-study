@@ -14,9 +14,11 @@ google
 
 JavaScript 中有 7 种原始数据类型，分别是Number（数值）、String（字符串）、Boolean（布尔值）、null、undefined、Symbol、BigInt；还有 3 种引用数据类型，即Object（对象）、Array（数组）、Function（函数）。
 
-### 调用栈
+### 调用栈，事件循环
 
-### 变量，作用域，内存
+### 执行上下文，变量，作用域，内存
+
+执行上下文分 全局执行上下文，函数执行上下文，块执行上下文
 
 ### 事件循环
 
