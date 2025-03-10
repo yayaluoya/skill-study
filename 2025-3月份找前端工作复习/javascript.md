@@ -64,15 +64,15 @@ JavaScript 中有 7 种原始数据类型，分别是Number（数值）、String
 
 ### 工作者线程
 
-使用 Web Worker https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers
+[使用 Web Worker](https://developer.mozilla.org/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
 
 #### SharedWorker
 
-https://developer.mozilla.org/zh-CN/docs/Web/API/SharedWorker
+[文档](https://developer.mozilla.org/zh-CN/docs/Web/API/SharedWorker)
 
 #### Service Worker
 
-https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API
+[文档](https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API)
 
 ### 严格模式
 
@@ -80,4 +80,4 @@ https://developer.mozilla.org/zh-CN/docs/Web/API/Service_Worker_API
 
 没用过
 
-看文档 https://developer.mozilla.org/zh-CN/docs/WebAssembly
+[文档](https://developer.mozilla.org/zh-CN/docs/WebAssembly)
