@@ -1,0 +1,19 @@
+{
+  "name": "yayaluoya-pnpm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@yayaluoya-pnpm/a": "workspace:^",
+    "@yayaluoya-pnpm/a2": "workspace:^",
+    "@yayaluoya-pnpm/b": "workspace:^",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  }
+}
