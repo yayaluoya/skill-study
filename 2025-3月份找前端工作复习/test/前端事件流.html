@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2">
+        <div id="div3">
+          <a id="cu" href="http://baidu.com" target="_blank">点我</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelector('#div1').addEventListener(
+        'click',
+        (e) => {
+          console.log('捕获', 1, e.bubbles, e.eventPhase);
+        },
+        true,
+      );
+      document.querySelector('#div2').addEventListener(
+        'click',
+        (e) => {
+          console.log('捕获', 2, e.bubbles, e.eventPhase);
+        },
+        true,
+      );
+      document.querySelector('#div3').addEventListener(
+        'click',
+        (e) => {
+          console.log('捕获', 3, e.bubbles, e.eventPhase);
+        },
+        true,
+      );
+      document.querySelector('#cu').addEventListener(
+        'click',
+        (e) => {
+          console.log('捕获', 'cu', e.bubbles, e.eventPhase);
+        },
+        true,
+      );
+      //
+      document.querySelector('#div1').addEventListener(
+        'click',
+        (e) => {
+          console.log('冒泡', 1, e.bubbles, e.eventPhase);
+        },
+        false,
+      );
+      document.querySelector('#div2').addEventListener(
+        'click',
+        (e) => {
+          console.log('冒泡', 2, e.bubbles, e.eventPhase);
+        },
+        false,
+      );
+      document.querySelector('#div3').addEventListener(
+        'click',
+        (e) => {
+          console.log('冒泡', 3, e.bubbles, e.eventPhase);
+
+          /**
+           * 这里可以说明默认事件是在整个事件流完成之后出发的
+           */
+          console.log('阻止默认事件');
+          e.preventDefault();
+        },
+        false,
+      );
+      document.querySelector('#cu').addEventListener(
+        'click',
+        (e) => {
+          console.log('冒泡', 'cu 1', e.bubbles, e.eventPhase, e);
+
+          /** 阻止了当前流程和后续的所有事件通知 */
+          // e.stopImmediatePropagation();
+
+          /** 阻止后续的所有事件通知 */
+          e.stopPropagation();
+        },
+        false,
+      );
+      document.querySelector('#cu').addEventListener(
+        'click',
+        (e) => {
+          console.log('冒泡', 'cu 2', e.bubbles, e.eventPhase, e);
+        },
+        false,
+      );
+    </script>
+  </body>
+</html>

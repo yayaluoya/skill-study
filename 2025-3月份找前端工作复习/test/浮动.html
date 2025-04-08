@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box">Float</div>
+      <p>
+        float
+        属性最初只用于在成块的文本内浮动图像，但是现在它已成为在网页上创建多列布局的最常用工具之一。
+      </p>
+      <div class="cleared"></div>
+    </div>
+    <h1>清除浮动</h1>
+    <p>
+      我们看到，一个浮动元素会被移出正常文档流，且其他元素会显示在它的下方。如果我们不想让剩余元素也受到浮动元素的影响，我们需要
+      停止 它；这是通过添加 clear 属性实现的。
+    </p>
+    <p>
+      clear 属性接受下列值： left：停止任何活动的左浮动 right：停止任何活动的右浮动
+      both：停止任何活动的左右浮动
+    </p>
+    <p>一个替代的方案是将包裹元素的 overflow 属性设置为除 visible 外的其他值。</p>
+    <p>
+      display: flow-root 一个较为现代的方案是使用 display 属性的 flow-root
+      值。它可以无需小技巧来创建块格式化上下文（BFC），在使用上没有副作用。
+    </p>
+
+    <style>
+      .box {
+        float: left;
+        margin-right: 15px;
+        width: 150px;
+        height: 100px;
+        border-radius: 5px;
+        background-color: rgb(207, 232, 220);
+        padding: 1em;
+      }
+      .wrapper {
+        background-color: rgb(79, 185, 227);
+        padding: 10px;
+        color: #fff;
+      }
+      .cleared {
+        clear: left;
+      }
+    </style>
+  </body>
+</html>

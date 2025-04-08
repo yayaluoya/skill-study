@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      async function a() {
+        console.log(await 1);
+        console.log(10);
+      }
+      async function b() {
+        console.log(
+          await {
+            then(callback) {
+              console.log('调用 then');
+              callback(2);
+            },
+          },
+        );
+        console.log(20);
+      }
+      async function c() {
+        console.log(await Promise.resolve(3));
+        console.log(30);
+      }
+      async function d() {
+        console.log(await 4);
+        console.log(40);
+      }
+
+      a();
+      b();
+      c();
+      d();
+
+      console.log('end');
+
+      Promise.resolve(5).then((r) => {
+        console.log(r);
+      });
+
+      queueMicrotask(()=>{
+        console.log(6);
+      });
+    </script>
+  </body>
+</html>
