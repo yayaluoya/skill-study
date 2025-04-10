@@ -44,6 +44,7 @@
 - shell 关于 shell 的学习
 - ssh 关于 ssh 的学习
 - tcp-ip 关于 tcp-ip 的学习
+- uniapp 关于uniapp的学习
 - vscode 关于 vscode 使用的一些技巧和细节
 - windows 关于 windows 的学习
 - webStorm 关于 webStorm 的使用，确实很智能，但是太智能了，而且对 ts 的支持没有 vscode 好
