@@ -18,7 +18,7 @@ types
 
 默认情况下，所有 可见 的 ”@types” 包都将包含在你的编译过程中。 在 node_modules/@types 中的任何包都被认为是 可见 的。 例如，这意味着包含 ./node_modules/@types/，../node_modules/@types/，../../node_modules/@types/ 中所有的包。。
 
-当 types 被指定，则只有列出的包才会被包含在全局范围内。例如：
+当 types 被指定，则只有列出的包才会被包含在**全局**范围内。例如：
 
 {
   "compilerOptions": {
