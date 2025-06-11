@@ -1,4 +1,6 @@
-ssh config配置文件的基本格式
+# ssh-config 文件
+
+## 基本格式
 
 Host 主机名别名
 HostName  主机名

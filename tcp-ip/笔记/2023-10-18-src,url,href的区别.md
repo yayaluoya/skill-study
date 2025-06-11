@@ -1,3 +1,5 @@
+# src,url,href的区别
+
 1.含义
 
 （1）url 统一资源定位符
@@ -36,7 +38,7 @@
 
 　　总结: src用于替换当前元素(比如：引入一张图片)；href用于在当前文档和引用资源之间建立联系。
 
-#### 理解
+## 理解
 
 url 全球资源定位器(Uniform Resource Locator)，就是代表资源的，不会做处理什么处理，直接在浏览器url输入框输入就行了
 src 全称Source Code 就是源代码的意思，从source来理解就很接近url的意思，代码呢就是说它还会被处理一下，所以img，script，iframe等会用src
