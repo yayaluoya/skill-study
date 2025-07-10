@@ -40,7 +40,9 @@ importers:
         specifier: ^4.9.2
         version: 4.10.0(webpack@5.99.1)
 
-  javaScript:
+  javaScript/envTest: {}
+
+  javaScript/ts/base:
     dependencies:
       '@babel/polyfill':
         specifier: ^7.12.1
@@ -8990,7 +8992,7 @@ snapshots:
 
   wide-align@1.1.5:
     dependencies:
-      string-width: 1.0.2
+      string-width: 3.1.0
 
   wildcard@2.0.1: {}
 

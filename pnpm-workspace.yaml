@@ -2,4 +2,6 @@ packages:
   - ".node"
   - "algorithm"
   - "AliYun/node"
-  - "javaScript"
+  - "javaScript/node"
+  - "javaScript/ts/*"
+  - "javaScript/envTest"
