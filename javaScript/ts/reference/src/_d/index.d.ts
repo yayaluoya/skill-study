@@ -5,6 +5,6 @@ declare module 'glob' {
 /**
  * 普通模块是局部的
  */
-export declare module AAAA {
+export declare namespace AAAA {
   class A {}
 }

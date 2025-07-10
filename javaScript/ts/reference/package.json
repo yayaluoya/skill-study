@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "@types/node": "^20.17.30",
     "core-js": "^3.8.1",
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
@@ -29,6 +30,7 @@
     "keypress": "^0.2.1",
     "pako": "^2.0.3",
     "raw-loader": "^4.0.2",
+    "reflect-metadata": "^0.2.2",
     "robotjs": "^0.6.0",
     "spdy": "^4.0.2",
     "ts-loader": "^8.0.13",

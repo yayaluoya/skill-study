@@ -3,12 +3,8 @@ import './Function';
 import './ES13';
 import './ts/metadata';
 console.log('hello word');
-import G from 'glob';
 
 // let test = TEST;
-
-let m: G.IGlob;
-let a: G.A;
 
 let i_m: ITest;
 
