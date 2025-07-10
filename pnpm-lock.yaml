@@ -142,6 +142,12 @@ importers:
         specifier: ^3.11.1
         version: 3.11.3(webpack-cli@4.10.0)(webpack@5.99.1)
 
+  javaScript/ts/config:
+    dependencies:
+      typescript:
+        specifier: ^5.8.3
+        version: 5.8.3
+
   javaScript/ts/reference:
     dependencies:
       '@babel/polyfill':
@@ -4070,6 +4076,11 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
 
+  typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   unc-path-regex@0.1.2:
     resolution: {integrity: sha512-eXL4nmJT7oCpkZsHZUOJo8hcX3GbsiDOa0Qu9F646fi8dT3XuSVopVqAcEiVzSKKH7UoDti23wNX3qGFxcW5Qg==}
     engines: {node: '>=0.10.0'}
@@ -5273,12 +5284,12 @@ snapshots:
   '@webpack-cli/configtest@1.2.0(webpack-cli@4.10.0)(webpack@5.99.1)':
     dependencies:
       webpack: 5.99.1(webpack-cli@4.10.0)
-      webpack-cli: 4.10.0(webpack-bundle-analyzer@4.10.2)(webpack-dev-server@3.11.3)(webpack@5.99.1)
+      webpack-cli: 4.10.0(webpack@5.99.1)
 
   '@webpack-cli/info@1.5.0(webpack-cli@4.10.0)':
     dependencies:
       envinfo: 7.14.0
-      webpack-cli: 4.10.0(webpack-bundle-analyzer@4.10.2)(webpack-dev-server@3.11.3)(webpack@5.99.1)
+      webpack-cli: 4.10.0(webpack@5.99.1)
 
   '@webpack-cli/serve@1.7.0(webpack-cli@4.10.0)':
     dependencies:
@@ -8759,6 +8770,8 @@ snapshots:
 
   typescript@4.9.5: {}
 
+  typescript@5.8.3: {}
+
   unc-path-regex@0.1.2: {}
 
   undefsafe@2.0.5: {}
@@ -9065,7 +9078,7 @@ snapshots:
       watchpack: 2.4.2
       webpack-sources: 3.2.3
     optionalDependencies:
-      webpack-cli: 4.10.0(webpack-bundle-analyzer@4.10.2)(webpack-dev-server@3.11.3)(webpack@5.99.1)
+      webpack-cli: 4.10.0(webpack@5.99.1)
     transitivePeerDependencies:
       - '@swc/core'
       - esbuild
