@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig-base.json",
+  "compilerOptions": {
+    "sourceMap": false
+  },
+  "references": [
+    {
+      "path": "./tsconfig-test-a.json"
+    },
+    {
+      "path": "./tsconfig-test-b.json"
+    },
+    {
+      "path": "./tsconfig-test-c.json"
+    }
+  ]
+}
