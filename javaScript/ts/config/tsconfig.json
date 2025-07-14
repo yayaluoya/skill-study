@@ -1,8 +1,5 @@
 {
   "extends": "./tsconfig-base.json",
-  "compilerOptions": {
-    "sourceMap": false
-  },
   "references": [
     {
       "path": "./tsconfig-test-base.json"
@@ -15,6 +12,9 @@
     },
     {
       "path": "./tsconfig-test-c.json"
+    },
+    {
+      "path": "./tsconfig-test-d.json"
     }
   ]
 }

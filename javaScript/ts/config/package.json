@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc --build"
+    "tsc": "tsc --build && del *.tsbuildinfo || del *.tsbuildinfo"
   },
   "keywords": [],
   "author": "",
