@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "run-s clear-dist tsc clear-cache",
-    "tsc": "tsc --build",
+    "build": "run-s clear-dist clear-cache tsc-build clear-cache",
+    "tsc-build": "tsc --build --verbose",
     "clear-dist": "rimraf -g ./dist-test-*/",
     "clear-cache": "rimraf -g ./*.tsbuildinfo"
   },
