@@ -42,6 +42,22 @@ importers:
 
   javaScript/envTest: {}
 
+  javaScript/node:
+    dependencies:
+      iohook:
+        specifier: ^0.7.2
+        version: 0.7.2
+      robotjs:
+        specifier: ^0.6.0
+        version: 0.6.0
+      spdy:
+        specifier: ^4.0.2
+        version: 4.0.2(supports-color@6.1.0)
+    devDependencies:
+      '@types/node':
+        specifier: ^24.0.13
+        version: 24.0.13
+
   javaScript/ts/config:
     dependencies:
       '@types/node':
@@ -9915,7 +9931,7 @@ snapshots:
 
   wide-align@1.1.5:
     dependencies:
-      string-width: 3.1.0
+      string-width: 4.2.3
 
   wildcard@2.0.1: {}
 

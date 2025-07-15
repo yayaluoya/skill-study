@@ -1,4 +1,4 @@
-#### 关于 npm init 命令的深度理解
+# 关于 npm init 命令的深度理解
 
 具体文档见 https://docs.npmjs.com/cli/v9/commands/npm-init
 
@@ -24,4 +24,3 @@ npm init @usr/foo@2.0.0 -> npm exec @usr/create-foo@2.0.0
 
 npm init foo@latest# 获取并运行最新的 书记官处create-foo
 npm init foo@1.2.3# 专门运行create-foo@1.2.3
-

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "noEmit": true,
+    "rootDir": "src",
+    "checkJs": true,
+    "module": "nodenext",
+  },
+  "include": ["src/**/*"]
+}
