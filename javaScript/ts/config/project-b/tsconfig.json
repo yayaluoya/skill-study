@@ -1,9 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "./tsconfig-base.json",
+  "extends": "../tsconfig-base.json",
   "compilerOptions": {
     "composite": true,
+    "rootDir": "src",
     "module": "CommonJS",
-    "outDir": "dist-test-b"
-  }
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"]
 }

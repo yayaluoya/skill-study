@@ -1,9 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "./tsconfig-base.json",
+  "extends": "../tsconfig-base.json",
   "compilerOptions": {
     "composite": true,
+    "rootDir": "src",
     "module": "System",
-    "outDir": "dist-test-c"
-  }
+    "outDir": "dist"
+  },
+  "include": ["src/**/*"]
 }

@@ -6,8 +6,8 @@
   "scripts": {
     "build": "run-s clear-dist clear-cache tsc-build clear-cache",
     "tsc-build": "tsc --build --verbose",
-    "clear-dist": "rimraf -g ./dist-test-*/",
-    "clear-cache": "rimraf -g ./*.tsbuildinfo"
+    "clear-dist": "rimraf -g ./project-*/dist/",
+    "clear-cache": "rimraf -g ./**/*.tsbuildinfo"
   },
   "keywords": [],
   "author": "",

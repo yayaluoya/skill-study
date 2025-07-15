@@ -3,19 +3,19 @@
   "extends": "./tsconfig-base.json",
   "references": [
     {
-      "path": "./tsconfig-test-base.json"
+      "path": "./project-a/tsconfig.json"
     },
     {
-      "path": "./tsconfig-test-a.json"
+      "path": "./project-b/tsconfig.json"
     },
     {
-      "path": "./tsconfig-test-b.json"
+      "path": "./project-base/tsconfig.json"
     },
     {
-      "path": "./tsconfig-test-c.json"
+      "path": "./project-c/tsconfig.json"
     },
     {
-      "path": "./tsconfig-test-d.json"
+      "path": "./project-d/tsconfig.json"
     }
   ]
 }
