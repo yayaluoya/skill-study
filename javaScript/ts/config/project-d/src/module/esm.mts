@@ -8,8 +8,4 @@ export function esmF() {
   console.log('esm 模块');
 }
 
-/**
- * 从这个打印结果可以看出
- * esm 模块 导入 commonJs 模块 的规则
- */
-console.log(normalDefF.default())
+normalDefF.default();
